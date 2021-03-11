@@ -1,0 +1,15 @@
+@mixin pc(){
+    @media only screen and (min-width: 768px){
+        @content;
+    }
+}
+
+$breakpoints: (
+  'pc': 768px,
+);
+
+@mixin mq($size) {
+  @media screen and (min-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
